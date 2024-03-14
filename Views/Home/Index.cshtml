@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model RegisterationForm.Models.RegModel
+
+<form method="post" asp-action="Index">
+    <div class="mb-3">
+        <label for="Name" class="form-label">name</label>
+        <input type="text" name="Name" class="form-control"/>
+        
+    </div>
+
+    <div class="mb-3">
+        <label for="Email" class="form-label">Email</label>
+        <input type="email" name="Email" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label for="PhNo" class="form-label">PhoneNumber</label>
+        <input type="number" name="PhoneNumber" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label for="Password" class="form-label">Password</label>
+        <input type="password" name="Password" class="form-control" />
+    </div>
+    
+    <div class="mb-3">
+        <label for="ConformPass" class="form-label">Re-Enter Password</label>
+        <input type="password" name="ConformPass" class="form-control" />
+        <span asp-validation-for="ConformPass"></span>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+    </form>
+    <form asp-action="Login">
+    <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+   

@@ -1,0 +1,21 @@
+﻿@model RegisterationForm.Models.Loging
+<form asp-action="Login">
+	<h1>Login</h1>
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">name</label>
+        <input type="text" asp-for="Name" class="form-control" />
+
+    </div>
+    <div class="mb-3">
+        <label asp-for="Password" class="form-label">Password</label>
+        <input asp-for="Password" class="form-control" />
+    </div>
+    
+	
+	<button>Log in</button>
+	<div class="register">
+		<p>Don't have a account <a asp-action="Index">Register</a></p>
+	</div>	
+</form>
+<p>@ViewBag.message</p>
+
